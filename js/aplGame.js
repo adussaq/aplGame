@@ -74,7 +74,7 @@
 			} else if (response === "APL") {
 				if (dataObj.caseType === "sAPL") {
 					// called APL for possible APL
-					responseStr = "So close, this was an APL mimic, the diagnosis was " + dataObj.diagnosis;
+					responseStr = "So close, this was an APL mimic, the diagnosis was " + dataObj.diagnosis + ".";
 				} else {
 					// called APL for not APL
 					responseStr = "Might want to hedge your bets, this was " + dataObj.diagnosis + "!";
