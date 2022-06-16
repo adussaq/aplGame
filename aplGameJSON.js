@@ -1,15 +1,12 @@
-DATA = {
-	cellavision: {
-		// APL cases
-		APL: [{
-			case: "1",
-			diagnosis: "APL",
-			imageCount: 36
-		}],
-		//Suspicious for APL
-		sAPL: [],
-		//Not APL
-		nAPL: []
+DATA = [
+	{
+		case: "case0",
+		diagnosis: "APL",
+		imageType: "cellavision",
+		caseType: "APL",
+		imageCount: 36,
+		// nAPLresponse: ""
+		// pAPLresponse:: ""
 	}
-};
+];
 
