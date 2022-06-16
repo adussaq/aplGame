@@ -94,7 +94,7 @@
 					responseStr = "Quick! Call the floor. The diagnosis was " + dataObj.diagnosis + ".";
 				} else {
 					//other option is pAPL, ie possible APL
-					responseStr = "You're right, this is not APL, but since it's " + dataObj.diagnosis + " with morphologic features that can mimic APL, it would be safer to order FISH."
+					responseStr = "Although this doesn't have all the features of APL, there are many bilobed forms and/or hypergranularity. It would be safer to order FISH. This is a " + dataObj.diagnosis + "."
 				}
 
 			}
