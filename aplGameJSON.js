@@ -144,14 +144,6 @@ DATA = [
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
-		case: "case3",
-		diagnosis: "BALL with t1;19",
-		imageType: "cellavision",
-		caseType: "nAPL",
-		imageCount: 113,
-		// nAPLresponse: ""
-		// pAPLresponse:: ""
-	}, {
 		case: "case4",
 		diagnosis: "B-ALL",
 		imageType: "cellavision",

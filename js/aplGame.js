@@ -91,10 +91,10 @@
 			} else {
 				// response is nAPL, ie not APL
 				if (dataObj.caseType === "APL") {
-					responseStr = "Quick! Call the floor. The diagnosis was " + dataObj.diagnosis;
+					responseStr = "Quick! Call the floor. The diagnosis was " + dataObj.diagnosis + ".";
 				} else {
 					//other option is pAPL, ie possible APL
-					responseStr = "You're right, this is not APL, but since it's " + dataObj.diagnosis + "it would be safer to order FISH"
+					responseStr = "You're right, this is not APL, but since it's " + dataObj.diagnosis + "it would be safer to order FISH."
 				}
 
 			}
@@ -173,12 +173,33 @@
 	let grabCase = function () {
 		// first APL vs nAPL vs sAPL
 		let caseTypeN = Math.random();
-		let caseType = "APL"
+		let caseType = "APL";
 		if (caseTypeN < .5) {
 			caseType = "nAPL";
 		} else if (caseTypeN < .7) {
 			caseType = "sAPL";
 		}
+
+		let cases = DATA.filter(entry => entry.caseType === caseType);
+
+		//get random parameters
+		let listCount = cases.map(entry => entry.imageCount)
+		let totalCount = listCount.reduce((a, b) => a + b);
+
+		let randomNum = Math.floor(Math.random() * totalCount) + 1;
+
+		let counter = 0;
+		let caseNumber = -1;
+		// console.log(randomNum, totalCount);
+		listCount.forEach(function(value, ind) {
+			counter += value;
+			// console.log(counter, caseNumber);
+			if (counter > randomNum && caseNumber === -1) {
+				caseNumber = ind;
+			}
+		});
+
+		return cases[caseNumber];
 	}
 
 	let grabImages = function (dataObj) {
@@ -195,10 +216,8 @@
 		evt.preventDefault();
 		$modal.modal("hide");
 		let thisCase = grabCase();
-		buildCase(DATA[0]);
+		buildCase(thisCase);
 	});
-
-
 
 	return;
 }())
