@@ -57,33 +57,41 @@
 			.click(answerResponse(dataObj, "nAPL")).appendTo($btnGroup);
 	}
 
+	let dialog = function (text) {
+		$("#exampleModalLabel").text(text);
+		$("#exampleModal").modal('show');
+		console.log('showing modal?');
+	}
+
 	let answerResponse = function (dataObj, response) {
 		return function (evt) {
 			evt.preventDefault();
+			let responseStr = "Not sure what happened... Sorry...";
+			
 			if (dataObj.caseType === response) {
-				console.log("Nailed it!! The diagnosis was " + dataObj.diagnosis + "!");
-			}
-			if (response === "APL") {
+				responseStr = "Nailed it!! The diagnosis was " + dataObj.diagnosis + "!";
+			} else if (response === "APL") {
 				if (dataObj.caseType === "pAPL") {
 					// called APL for possible APL
-					console.log("So close, this was an APL mimic, the diagnosis was " + dataObj.diagnosis);
+					responseStr = "So close, this was an APL mimic, the diagnosis was " + dataObj.diagnosis;
 				} else {
 					// called APL for not APL
-					console.log("Might want to hedge your bets, this was " + dataObj.diagnosis + "!");
+					responseStr = "Might want to hedge your bets, this was " + dataObj.diagnosis + "!";
 				}
 
 			} else if (response === "pAPL") {
 				// repsonse is possible APL, FISH
 				if (dataObj.caseType === "APL") {
-					console.log("Glad you decided to go FISHing, this was " +  dataObj.diagnosis + "!");
+					responseStr = "Glad you decided to go FISHing, this was " +  dataObj.diagnosis + "!";
 				} else {
 					// other option is not APL
-					console.log("Better safe than sorry, this was " + dataObj.diagnosis + "!");
+					responseStr = "Better safe than sorry, this was " + dataObj.diagnosis + "!";
 				}
 			} else {
 				// response is nAPL, ie not APL
 			}
-			console.log("you clicked me");
+			console.log(responseStr);
+			dialog(responseStr);
 		};
 	};
 
