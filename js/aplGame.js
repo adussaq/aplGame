@@ -165,7 +165,13 @@
 
 	let grabCase = function () {
 		// first APL vs nAPL vs sAPL
-		let caseType = Math.random();
+		let caseTypeN = Math.random();
+		let caseType = "APL"
+		if (caseTypeN < .5) {
+			caseType = "nAPL";
+		} else if (caseTypeN < .7) {
+			caseType = "sAPL";
+		}
 	}
 
 	let grabImages = function (dataObj) {
