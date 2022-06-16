@@ -53,7 +53,7 @@
 		$('<button>', {type: "button", class: "btn btn-success w-100", text: "Its an APL"})
 			.click(answerResponse(dataObj, "APL")).appendTo($btnGroup);
 		$('<button>', {type: "button", class: "btn btn-warning w-100", text: "Lets FISH to find out"})
-			.click(answerResponse(dataObj, "pAPL")).appendTo($btnGroup);
+			.click(answerResponse(dataObj, "sAPL")).appendTo($btnGroup);
 		$('<button>', {type: "button", class: "btn btn-danger w-100", text: "That is not an APL"})
 			.click(answerResponse(dataObj, "nAPL")).appendTo($btnGroup);
 	}
@@ -72,7 +72,7 @@
 			if (dataObj.caseType === response) {
 				responseStr = "Nailed it!! The diagnosis was " + dataObj.diagnosis + "!";
 			} else if (response === "APL") {
-				if (dataObj.caseType === "pAPL") {
+				if (dataObj.caseType === "sAPL") {
 					// called APL for possible APL
 					responseStr = "So close, this was an APL mimic, the diagnosis was " + dataObj.diagnosis;
 				} else {
@@ -80,7 +80,7 @@
 					responseStr = "Might want to hedge your bets, this was " + dataObj.diagnosis + "!";
 				}
 
-			} else if (response === "pAPL") {
+			} else if (response === "sAPL") {
 				// repsonse is possible APL, FISH
 				if (dataObj.caseType === "APL") {
 					responseStr = "Glad you decided to go FISHing, this was " +  dataObj.diagnosis + "!";
@@ -170,6 +170,17 @@
 		}
 	};
 
+	let grabCase = function () {
+		// first APL vs nAPL vs sAPL
+		let caseTypeN = Math.random();
+		let caseType = "APL"
+		if (caseTypeN < .5) {
+			caseType = "nAPL";
+		} else if (caseTypeN < .7) {
+			caseType = "sAPL";
+		}
+	}
+
 	let grabImages = function (dataObj) {
 		let imgArr = generateUniqueRandomNumbers(12, dataObj.imageCount)
 			.map(num => [
@@ -183,6 +194,7 @@
 	$('.newCard').click(function (evt) {
 		evt.preventDefault();
 		$modal.modal("hide");
+		let thisCase = grabCase();
 		buildCase(DATA[0]);
 	});
 
