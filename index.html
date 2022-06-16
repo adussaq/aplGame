@@ -85,7 +85,7 @@
     <h1>Bobbing for APLs</h1>
     <p class="lead">Lets Play!</p>
     <p class="lead">
-      <a href="#" id="startCards" class="btn btn-lg btn-secondary fw-bold border-white bg-white">START</a>
+      <a href="#" id="startCards" class="newCard btn btn-lg btn-secondary fw-bold border-white bg-white">START</a>
     </p>
   </main>
 
@@ -94,18 +94,18 @@
 
 </div>
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id=""></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <!-- <div class="modal-body">
-          ...
-        </div> -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <div  class="modal-body">
+          <h4 id="exampleModalLabel"></h4>
+        </div>
+        <div class="modal-footer btn-group d-flex btnfill">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Look Again?</button>
+          <button type="button" class="newCard btn btn-success">New Card</button>
         </div>
       </div>
     </div>

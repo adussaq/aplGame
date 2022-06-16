@@ -4,6 +4,7 @@
 	console.log('v0.0.0');
 
 	let $main = $('#main');
+	let $modal = $("#exampleModal");
 
 	let randomNumber = function (max) {
 		//returns a number between 0 and max - 1
@@ -59,7 +60,7 @@
 
 	let dialog = function (text) {
 		$("#exampleModalLabel").text(text);
-		$("#exampleModal").modal('show');
+		$modal.modal('show');
 		console.log('showing modal?');
 	}
 
@@ -172,10 +173,13 @@
 	}
 
 	// Create button function
-	$('#startCards').click(function (evt) {
+	$('.newCard').click(function (evt) {
 		evt.preventDefault();
+		$modal.modal("hide");
 		buildCase(DATA[0]);
 	});
+
+
 
 	return;
 }())
