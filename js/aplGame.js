@@ -90,15 +90,15 @@
 					responseStr = "Glad you decided to go FISHing, this was " +  dataObj.diagnosis + "!";
 				} else {
 					// other option is not APL
-					responseStr = "Better safe than sorry, this was " + dataObj.diagnosis + "!";
+					responseStr = "This did not require FISH, but perhaps you are better safe than sorry, this was " + dataObj.diagnosis + ".";
 				}
 			} else {
 				// response is nAPL, ie not APL
 				if (dataObj.caseType === "APL") {
-					responseStr = "Quick! Call the floor. The diagnosis was " + dataObj.diagnosis + ".";
+					responseStr = "Quick! Call the floor! The diagnosis was " + dataObj.diagnosis + ".";
 				} else {
 					//other option is pAPL, ie possible APL
-					responseStr = "You're right, this is not APL, but since it's " + dataObj.diagnosis + " with morphologic features that can mimic APL, it would be safer to order FISH."
+					responseStr = "You're right, this is not APL, but since it was " + dataObj.diagnosis + " with morphologic features that can mimic APL, it would be safer to order FISH."
 				}
 
 			}
