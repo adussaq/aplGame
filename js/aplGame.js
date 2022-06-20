@@ -70,7 +70,11 @@
 			let responseStr = "Not sure what happened... Sorry...";
 			
 			if (dataObj.caseType === response) {
-				responseStr = "Nailed it!! The diagnosis was " + dataObj.diagnosis + "!";
+				if (dataObj.caseType === "sAPL") {
+					responseStr = "Nailed it!! While this was not APL it was a common APL mimic, the diagnosis was " + dataObj.diagnosis + "!";
+				} else {
+					responseStr = "Nailed it!! The diagnosis was " + dataObj.diagnosis + "!";
+				}
 			} else if (response === "APL") {
 				if (dataObj.caseType === "sAPL") {
 					// called APL for possible APL
@@ -98,6 +102,11 @@
 				}
 
 			}
+
+			if (dataObj.response) {
+				responseStr = responseStr + " " + dataObj.response;
+			}
+
 			console.log(responseStr);
 			dialog(responseStr);
 		};

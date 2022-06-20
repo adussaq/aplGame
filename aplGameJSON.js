@@ -69,6 +69,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 12,
+		response: "There are occasional blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -77,6 +78,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 54,
+		response: "There are occasional blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -85,6 +87,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 27,
+		response: "There are occasional blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -93,6 +96,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 20,
+		response: "Although azurophilic granules are not prominent, the binucleation present raise concern for hypogranular APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -101,6 +105,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 84,
+		response: "There are occasional blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -109,6 +114,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 47,
+		reponse: "There are some blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
@@ -117,6 +123,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 63,
+		response: "Although azurophilic granules are not prominent, the binucleation present raise concern for hypogranular APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
