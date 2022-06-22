@@ -114,7 +114,7 @@ DATA = [
 		imageType: "cellavision",
 		caseType: "sAPL",
 		imageCount: 47,
-		reponse: "There are some blasts with binucleation and azurophilic granules, which raise concern for APL.",
+		response: "There are some blasts with binucleation and azurophilic granules, which raise concern for APL.",
 		// nAPLresponse: ""
 		// pAPLresponse:: ""
 	}, {
