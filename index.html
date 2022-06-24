@@ -76,7 +76,8 @@
       <h3 class="float-md-start mb-0">Bobbing for APLs</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a id="homeBtn" class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-        <a id="usBtn" class="nav-link fw-bold py-1 px-0" href="#">About Us (Coming Soon)</a>
+        <a id="usBtn" class="nav-link fw-bold py-1 px-0" href="#">About Us</a>
+        <a id="tutorBtn" class="nav-link fw-bold py-1 px-0" href="#">Tutorial</a>
       </nav>
     </div>
   </header>
@@ -89,7 +90,103 @@
         <a href="#" id="startCards" class="newCard btn btn-lg btn-secondary fw-bold border-white bg-white">START</a>
       </p>
     </div>
-    <div id="aboutus" style="display:none;">
+
+    <div id="aboutus" class="card" style="display:none;">
+      <h2>About Us</h2>
+      <p class="lead" align= "justify">
+      <style> 
+      div {padding-left: 5%; padding-right: 5%; padding-top: 3%; padding-bottom: 3%;
+      }
+      </style> 
+      <font size="+1"> Calling APL on a peripheral blood smear can be challenging. That's why a team of Stanford Clinical Pathology residents got together to create a learning tool so that anyone can hone their skills at identifying APL and its mimics. We hope that you will find this game helpful. The source code and image files can be found on <a href=https://github.com/adussaq/aplGame>Github</a>. 
+      </font></p>
+      <h2>Our Team</h2>
+      <font size="+1">  
+      <p class="link">
+      <a href=https://www.pathologyoutlines.com/directory/alex-dussaq>Alex Dussaq, M.D., Ph.D.</a> 
+      </p>
+      <p class="link">
+      <a href=https://www.pathologyoutlines.com/directory/rebecca-rojansky>Rebecca Rojansky, M.D., Ph.D.</a> 
+      </p>
+      <p class="link">   
+      <a href=https://www.pathologyoutlines.com/directory/gisele-toumi>Gisele Toumi, M.D.</a>  
+      </p>
+      <p class="link">     
+      <a href=https://www.pathologyoutlines.com/directory/jingjing-zhang>Jing Zhang, M.D., Ph.D.</a> 
+      </p>
+      </font>
+    </div>
+
+    <div id="tut" class="card" style="display:none;">
+      <h1>Tutorial</h1>
+      <p class="lead" align= "justify">
+      <style> 
+      div {padding-left: 5%; padding-right: 5%; padding-top: 3%; padding-bottom: 3%; font-size: 1.125rem
+      }
+      li {font-size: 1.125rem 
+      }     
+      </style> 
+      Acute promyelocytic leukemia (APL) is a subtype of acute myeloid leukemia (AML) with a specific
+       abnormality that involves chromosomes 15 and 17. This leads to production of the abnormal fusion gene, PML/RARα. 
+       In APL myeloid maturation arrests at the promyelocyte stage, resulting in an overproduction of promyelocytes, which circulate in the peripheral blood.
+       Although not typical myeloblasts, these are considered blast equivalents in APL. 
+       Treatment with all-trans retinoic acid (ATRA) induces maturation of these cells with the goal 
+       of returning white blood cell counts to normal limits and decreasing APL-related symptoms, including life threatening bleeding. 
+       <br><br><b>The two most common types of APL are: </b>
+      </p>
+        <p class=lead align="left">Classical hypergranular APL (M3)
+        <ul class="lead" align="left">
+          <li>Many coarse purple granules in the cytoplasm</li>
+          <li>Irregular, bilobed or folded nuclear contours</li> 
+          <li>Auer rods in some cells</li>
+        </ul> 
+        
+        <img src="\imgs\cellavision\APL\case3\img37.jpg" alt="APL image" style="width:128px;height:128px;">
+        </p>
+      
+      <p class="lead" align="left">Microgranular (a.k.a. hypogranular) APL variant (M3v)
+        <ul class="lead" align="left">
+          <li>Most blasts devoid of granules or have sparse fine granules</li>
+          <li>Irregular, bilobed or folded nuclear contours</li> 
+          <li>Basophilic cytoplasm</li>
+        </ul>
+      </p>
+      <p class="lead" align="justify">
+        Other rare subtypes of APL include hyperbasophilic APL characterized by high N/C ratio and strongly basophilic cytoplasm with very rare to no granules. Acute eosinophilic leukaemia with PML/RARa positivity, and PML with basophil-like granules
+      
+      <br><br><b>Certain subtypes of AML may mimic APL. Some important APL mimics include:</b>
+      </p>
+      <p class="lead" align="left">NPM1-mutated AML
+        <ul class="lead" align="left">
+          <li>May show bilobed nuclei, clearly visible cytoplasmic granules, and Auer rods</li>
+          <li>A significant number of blasts with cup-like nuclei may favor this over APL</li>
+        </ul>
+      </p>
+      <p class="lead" align="left">AML with t(8;21)
+        <ul class="lead" align="left">
+          <li>A core binding factor AML</li>
+          <li>There may be neutrophilia and neutrophils can be dysplastic</li>
+          <li>Sometimes there is eosinophilic differentiation</li> 
+          <li>Some blasts have nuclear indentation (Golgi zone)</li>
+          <li>Often a long thin Auer rod</li> 
+        </ul>
+      </p>
+      <p class="lead" align="left">AML with inv(16)
+        <ul class="lead" align="left">
+          <li>Frequently looks like acute myelomonocytic leukaemia</li> 
+          <li>Sometimes eosinophilia</li>
+        </ul>
+      </p>
+      <p class="lead" align="justify">
+       For the on-call pathologist reviewing a blood smear for a patient with a new diagnosis of leukemia, the key decision is whether suspicion for APL is high enough to warrant immediate fluorescence in-situ hybridization (FISH) for t(15;17) as this will facilitate urgent treatment with ATRA if appropriate. Therefore, it is important to develop a familiarity with the spectrum of APL morphologies. </li>
+      <br><br>We hope that practicing with Bobbing for APLs will help increase your confidence in identifying APL. Good luck!
+      <br><br><font size="5+"><b>References:</b></font>
+      <br><font size ="3-">1. Liso V, Bennett J. Morphological and cytochemical characteristics of leukaemic promyelocytes. Best Pract Res Clin Haematol. 2003 Sep;16(3):349-55. doi: 10.1016/s1521-6926(03)00061-6. PMID: 12935955.
+      <br>2. Arana Rosainz MJ, Nguyen N, Wahed A, Lelenwa LC, Aakash N, Schaefer K, Rios A, Kanaan Z, Chen L. Acute myeloid leukemia with mutated NPM1 mimics acute promyelocytic leukemia presentation. Int J Lab Hematol. 2021 Apr;43(2):218-226. doi: 10.1111/ijlh.13357. Epub 2020 Oct 25. PMID: 33099879.
+      <br>3. Bain BJ, Béné MC. Morphological and Immunophenotypic Clues to the WHO Categories of Acute Myeloid Leukaemia. Acta Haematol. 2019;141(4):232-244. doi: 10.1159/000496097. Epub 2019 Apr 9. PMID: 30965338.
+      </font>
+
+      </p>
     </div>
   </main>
 
@@ -109,7 +206,7 @@
         </div>
         <div class="modal-footer btn-group d-flex btnfill">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Look Again?</button>
-          <button type="button" class="newCard btn btn-success">New Card</button>
+          <button type="button" class="newCard btn btn-success">New Case</button>
         </div>
       </div>
     </div>

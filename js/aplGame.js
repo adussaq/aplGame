@@ -3,7 +3,7 @@
 
 	console.log('v0.0.0');
 
-	let $main = $('#main');
+	let $main = $('#home');
 	let $modal = $("#exampleModal");
 
 	let randomNumber = function (max) {
@@ -227,6 +227,44 @@
 		let thisCase = grabCase();
 		buildCase(thisCase);
 	});
+	$('#usBtn').click(function (evt) {
+		evt.preventDefault();
+		console.log("you clicked a button");
+		$("#tut").hide();
+		$("#home").hide();
+		$("#aboutus").show();
+		if (!$("#usBtn").hasClass("active")) {
+			$("#usBtn").addClass("active");
+			$("#homeBtn").removeClass("active");
+			$("#tutorBtn").removeClass("active");
+		}
+	});
+	$('#homeBtn').click(function (evt) {
+		evt.preventDefault();
+		console.log("you clicked a button");
+		$("#aboutus").hide();
+		$("#tut").hide();
+		$("#home").show();
+		if (!$("#homeBtn").hasClass("active")) {
+			$("#usBtn").removeClass("active");
+			$("#homeBtn").addClass("active");
+			$("#tutorBtn").removeClass("active");
+		}		
+	});
+	$('#tutorBtn').click(function (evt) {
+		evt.preventDefault();
+		console.log("you clicked a button");
+		$("#aboutus").hide();
+		$("#tut").show();
+		$("#home").hide();
+		if (!$("#tutorBtn").hasClass("active")) {
+			$("#usBtn").removeClass("active");
+			$("#homeBtn").removeClass("active");
+			$("#tutorBtn").addClass("active");
+		}		
+	});
 
+
+	
 	return;
 }())
