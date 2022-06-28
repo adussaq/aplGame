@@ -69,6 +69,20 @@
 			evt.preventDefault();
 			let responseStr = "Not sure what happened... Sorry...";
 			
+
+			// gtag('event', "answer_question", {
+			//   'event_category': "btn-click",
+			//   'value': 
+			//   // 'event_label': <label>,
+			// });
+
+			ga('send', {
+			  hitType: 'event',
+			  eventCategory: 'click',
+			  eventAction: 'answer',
+			  eventLabel: "caseType:" + dataObj.caseType + "|case:" + dataObj.case + "|res:" + response,
+			});
+
 			if (dataObj.caseType === response) {
 				if (dataObj.caseType === "sAPL") {
 					responseStr = "Nailed it!! While this was not APL it was a common APL mimic, the diagnosis was " + dataObj.diagnosis + "!";
@@ -219,6 +233,17 @@
 			]);
 		return imgArr;
 	}
+
+	// // create google event tracking
+	// ga('create', 'APL|res-APL', 'auto', 'APL|res-APL');
+	// ga('create', 'APL|res-sAPL', 'auto', 'APL|res-sAPL');
+	// ga('create', 'APL|res-nAPL', 'auto', 'APL|res-nAPL');
+	// ga('create', 'sAPL|res-APL', 'auto', 'sAPL|res-APL');
+	// ga('create', 'sAPL|res-sAPL', 'auto', 'sAPL|res-sAPL');
+	// ga('create', 'sAPL|res-nAPL', 'auto', 'sAPL|res-nAPL');
+	// ga('create', 'nAPL|res-APL', 'auto', 'nAPL|res-APL');
+	// ga('create', 'nAPL|res-sAPL', 'auto', 'nAPL|res-sAPL');
+	// ga('create', 'nAPL|res-nAPL', 'auto', 'nAPL|res-nAPL');
 
 	// Create button function
 	$('.newCard').click(function (evt) {
