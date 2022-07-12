@@ -76,12 +76,14 @@
 			//   // 'event_label': <label>,
 			// });
 
-			ga('send', {
-			  hitType: 'event',
-			  eventCategory: 'click',
-			  eventAction: 'answer',
-			  eventLabel: "caseType:" + dataObj.caseType + "|case:" + dataObj.case + "|res:" + response,
-			});
+			if (window.hasOwnProperty("ga")) {
+				ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'click',
+				  eventAction: 'answer',
+				  eventLabel: "caseType:" + dataObj.caseType + "|case:" + dataObj.case + "|res:" + response,
+				});
+			}
 
 			if (dataObj.caseType === response) {
 				if (dataObj.caseType === "sAPL") {
